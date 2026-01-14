@@ -302,6 +302,117 @@
     border-color: var(--deloitte-green) !important;
     color: white !important;
 } 
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-title::after {
+        left: 0;
+        transform: none;
+        width: 60px;
+    }
+
+    .flow-diagram {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flow-step {
+        min-width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .flow-step::after {
+        content: '↓';
+        position: absolute;
+        right: 50%;
+        left: auto;
+        top: auto;
+        bottom: -25px;
+        transform: translateX(50%);
+        font-size: 25px;
+    }
+
+    .flow-step:last-child::after {
+        content: '';
+    }
+
+    .stats-box {
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    .stats-number {
+        font-size: 2.5rem;
+    }
+
+    .navbar-text {
+        font-size: 0.85rem;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .card-custom {
+        margin-bottom: 20px;
+    }
+
+    .timeline-item {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    /* Stack cards vertically on mobile */
+    .row .col-md-4, 
+    .row .col-lg-4,
+    .row .col-md-6,
+    .row .col-lg-6 {
+        margin-bottom: 20px;
+    }
+
+    /* Adjust padding for mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Better button sizing for mobile */
+    .btn-deloitte {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Fix hero section spacing */
+    .hero-content {
+        text-align: center;
+    }
+
+    /* Adjust icon box size for mobile */
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    /* Make table responsive */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
     </style>
 </head>
 
