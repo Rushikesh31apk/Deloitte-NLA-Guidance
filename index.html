@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deloitte NLA 2026 - Complete Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --deloitte-green: #86BC25;
+            --deloitte-dark: #0D0D0D;
+            --deloitte-gray: #53565A;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--deloitte-dark);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--deloitte-dark) 0%, var(--deloitte-gray) 100%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--deloitte-green) !important;
+            font-size: 1.3rem;
+        }
+
+        .navbar-text {
+            color: white !important;
+            font-size: 0.95rem;
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .section:nth-child(odd) {
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--deloitte-dark);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--deloitte-green);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--deloitte-dark) 0%, var(--deloitte-gray) 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(134,188,37,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-deloitte {
+            background: var(--deloitte-green);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-deloitte:hover {
+            background: #75a521;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(134, 188, 37, 0.3);
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--deloitte-green) 0%, #75a521 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 30px;
+        }
+
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .flow-step::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: var(--deloitte-green);
+        }
+
+        .flow-step:last-child::after {
+            content: '';
+        }
+
+        .flow-number {
+            width: 50px;
+            height: 50px;
+            background: var(--deloitte-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .stats-box {
+            background: linear-gradient(135deg, var(--deloitte-green) 0%, #75a521 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--deloitte-green);
+        }
+
+        .badge-deloitte {
+            background: var(--deloitte-green);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: var(--deloitte-dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .highlight {
+            color: var(--deloitte-green);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .flow-step::after {
+                content: '↓';
+                right: 50%;
+                top: auto;
+                bottom: -30px;
+            }
+        }
+
+        .question-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid var(--deloitte-green);
+        }
+
+        .mistake-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-graduation-cap"></i> Deloitte NLA 2026
+            </a>
+            <span class="navbar-text ms-auto">
+                <i class="fas fa-user-graduate"></i> By Rushikesh Narawade
+            </span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 hero-content">
+                    <div class="mb-4">
+                    </div>
+                    <h1 class="display-3 fw-bold mb-3">Deloitte<span
+                            style="color: var(--deloitte-green); font-size: 4rem;">.</span></h1>
+                    <h2 class="display-5 mb-3"><b>NLA 2026</b></h2>
+                    <h3 class="display-6 mb-4">Your Gateway to Deloitte</h3>
+                    <p class="lead mb-2"><span class="highlight">I Cracked NLA 2025</span> | Real Journey | Real
+                        Guidance</p>
+                    <p class="mb-4"><strong>Rushikesh Narawade</strong> - Associate Analyst @ Deloitte</p>
+                    <button class="btn-deloitte"
+                        onclick="document.getElementById('deloitte-info').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-rocket"></i> Start Your Journey
+                    </button>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <i class="fas fa-building" style="font-size: 200px; color: rgba(134,188,37,0.2);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deloitte Information -->
+    <section id="deloitte-info" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">About Deloitte</h2>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="text-center mb-3">What is Deloitte?</h4>
+                        <p>
+                            Deloitte is one of the <strong>Big Four</strong> accounting firms and the
+                            <strong>largest professional services network in the world</strong>, providing
+                            audit, consulting, tax, and advisory services.
+                        </p>
+
+                        <ul class="mt-3">
+                            <li><strong>Founder:</strong> William Welch Deloitte</li>
+                            <li><strong>Founded:</strong> 1845</li>
+                            <li><strong>Founded In:</strong> London, United Kingdom</li>
+                            <li><strong>Global Headquarters:</strong> London, UK</li>
+                            <li><strong>Presence:</strong> 150+ countries</li>
+                            <li><strong>Employees:</strong> 345,000+ worldwide</li>
+                            <li><strong>Core Services:</strong> Audit, Consulting, Tax, Advisory</li>
+                            <li><strong>Known For:</strong> Innovation, digital transformation, and enterprise
+                                consulting</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+
+                        <h4 class="text-center mb-3">Why Join Deloitte?</h4>
+
+                        <p class="text-muted text-center">
+                            Deloitte offers a dynamic and growth-oriented work environment where
+                            professionals can build impactful careers while working on global
+                            projects with industry-leading clients.
+                        </p>
+
+                        <ul class="mt-3">
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                Strong global brand with excellent market reputation
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                Opportunity to work with Fortune 500 and global clients
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                Continuous learning, certifications, and leadership programs
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                Competitive salary, bonuses, and comprehensive benefits
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                Focus on work-life balance, wellness, and flexible work culture
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                International exposure and global career mobility
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                Inclusive culture that encourages innovation and diversity
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="card-custom p-4">
+                        <h4 class="highlight mb-3"><i class="fas fa-users"></i> Deloitte USI</h4>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <div class="stats-box">
+                                    <div class="stats-number">4,50,000+</div>
+                                    <p class="mb-0">Employees in worldwide</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="stats-box">
+                                    <div class="stats-number">TOP 1</div>
+                                    <p class="mb-0">Global Presence</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="stats-box">
+                                    <div class="stats-number">Tech</div>
+                                    <p class="mb-0">Future Ready</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="stats-box">
+                                    <div class="stats-number">150+</div>
+                                    <p class="mb-0">Countries</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is NLA -->
+    <section id="nla" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">What is Deloitte NLA?</h2>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4 class="text-center mb-3">NLA Full Form</h4>
+                        <h3 class="text-center highlight">National Level Assessment</h3>
+                        <p class="text-center mt-3">Deloitte's main entry-level hiring program for fresh graduates
+                            across India</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Why NLA?</h4>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-arrow-right text-success"></i> Direct entry to Deloitte
+                            </li>
+                            <li class="mb-2"><i class="fas fa-arrow-right text-success"></i> Good package for freshers
+                            </li>
+                            <li class="mb-2"><i class="fas fa-arrow-right text-success"></i> Global exposure</li>
+                            <li class="mb-2"><i class="fas fa-arrow-right text-success"></i> Career growth opportunities
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <h4 class="highlight mb-3"><i class="fas fa-users"></i> Who Can Apply?</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 2026 Batch Students</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Engineering (B.E./B.Tech -
+                                All branches)</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Science (B.Sc./M.Sc. - All
+                                courses)</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Computer Applications
+                                (BCA/MCA)</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Commerce (B.Com/M.Com -
+                                All courses)</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> No active backlogs during
+                                application</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success"></i> Minimum 60% marks
+                                throughout academics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <h4 class="highlight mb-3"><i class="fas fa-graduation-cap"></i> Application Process</h4>
+                        <div class="mb-3">
+                            <h6>On-Campus</h6>
+                            <p>Through your college placement cell when Deloitte visits for campus recruitment</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Off-Campus</h6>
+                            <p>Apply directly on Deloitte careers portal or through HirePro platform</p>
+                        </div>
+                        <div class="alert alert-info mb-0">
+                            <strong>Note:</strong> All stages use HirePro platform for assessment and interviews
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hiring Process -->
+    <section id="process" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Complete Deloitte NLA Hiring Process</h2>
+            <div class="flow-diagram mt-5">
+                <div class="flow-step">
+                    <div class="flow-number">1</div>
+                    <div class="icon-box" style="width: 60px; height: 60px;">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h5 class="mt-3">Registration</h5>
+                    <p>Apply through college or HirePro portal</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">2</div>
+                    <div class="icon-box" style="width: 60px; height: 60px;">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h5 class="mt-3">Resume Review</h5>
+                    <p>HirePro screens based on eligibility</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">3</div>
+                    <div class="icon-box" style="width: 60px; height: 60px;">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h5 class="mt-3">Online Test</h5>
+                    <p>54 MCQs + 2 Coding (Time limited)</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">4</div>
+                    <div class="icon-box" style="width: 60px; height: 60px;">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h5 class="mt-3">Interview</h5>
+                    <p>Technical + HR combined round</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-number">5</div>
+                    <div class="icon-box" style="width: 60px; height: 60px;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h5 class="mt-3">Final Selection</h5>
+                    <p>Offer letter & onboarding</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="card-custom p-4">
+                        <h4 class="highlight mb-4"><i class="fas fa-info-circle"></i> Process Details</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h5><strong>Stage 1: Registration on HirePro</strong></h5>
+                                <p>Fill application form with personal and academic details. Upload your resume. Make
+                                    sure all eligibility criteria are met before applying.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5><strong>Stage 2: Resume Review by HirePro</strong></h5>
+                                <p>HirePro system reviews your resume automatically. Checks CGPA, course eligibility,
+                                    and backlogs. Shortlisted candidates get email with test link.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5><strong>Stage 3: Online Assessment on HirePro</strong></h5>
+                                <p>Test includes 54 MCQs and 2 coding questions. Each section has its own time limit and
+                                    cutoff. Must clear section-wise cutoff to proceed.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5><strong>Stage 4: Interview Round</strong></h5>
+                                <p>Combined technical and HR interview lasting 30-45 minutes. Tests your coding
+                                    knowledge, concepts, communication, and attitude.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5><strong>Stage 5: Final Selection</strong></h5>
+                                <p>Offer letter sent within 2-4 weeks. Onboarding process starts with document
+                                    verification and background check.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATS Friendly Resume -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">ATS-Friendly Resume Format</h2>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card-custom p-5">
+                        <div class="alert alert-info mb-4">
+                            <h5><i class="fas fa-info-circle"></i> Why ATS-Friendly Resume?</h5>
+                            <p class="mb-0">HirePro uses Applicant Tracking System (ATS) to scan resumes. Your resume
+                                must be ATS-friendly to pass the first screening!</p>
+                        </div>
+
+                        <!-- Resume Template -->
+                        <div style="border: 2px solid var(--deloitte-gray); padding: 30px; background: white;">
+                            <!-- Header Section -->
+                            <div class="row mb-4">
+                                <div class="col-md-8">
+                                    <h2 style="color: var(--deloitte-dark); margin: 0; font-weight: 700;">YOUR FULL NAME
+                                    </h2>
+                                    <p style="margin: 5px 0; color: var(--deloitte-gray);">Your Current Role/Aspiration
+                                    </p>
+                                    <div style="margin-top: 10px;">
+                                        <p style="margin: 3px 0;"><i class="fas fa-phone"></i> +91 XXXXXXXXXX</p>
+                                        <p style="margin: 3px 0;"><i class="fas fa-envelope"></i> your.email@example.com
+                                        </p>
+                                        <p style="margin: 3px 0;"><i class="fas fa-map-marker-alt"></i> City, State,
+                                            India</p>
+                                        <p style="margin: 3px 0;"><i class="fab fa-linkedin"></i>
+                                            linkedin.com/in/yourprofile</p>
+                                        <p style="margin: 3px 0;"><i class="fab fa-github"></i> github.com/yourprofile
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <div
+                                        style="width: 130px; height: 130px; border: 2px solid var(--deloitte-gray); display: flex; align-items: center; justify-content: center; margin-left: auto; background: #f8f9fa;">
+                                        <i class="fas fa-user"
+                                            style="font-size: 60px; color: var(--deloitte-gray);"></i>
+                                    </div>
+                                    <p class="small mt-2" style="color: var(--deloitte-gray);">Professional Photo</p>
+                                </div>
+                            </div>
+
+                            <hr style="border-top: 2px solid var(--deloitte-green);">
+
+                            <!-- About Section -->
+                            <div class="mb-4">
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    ABOUT ME</h5>
+                                <p style="text-align: justify; line-height: 1.6;">
+                                    Final year [Your Degree] student with strong foundation in programming and
+                                    problem-solving.
+                                    Passionate about technology with hands-on experience in [Your Skills].
+                                    Seeking opportunities to contribute and grow in software development.
+                                </p>
+                            </div>
+
+                            <!-- Technical Skills -->
+                            <div class="mb-4">
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    TECHNICAL SKILLS</h5>
+                                <p style="margin: 5px 0;"><strong>Programming Languages:</strong> Java, Python, C++,
+                                    JavaScript</p>
+                                <p style="margin: 5px 0;"><strong>Web Technologies:</strong> HTML, CSS, React, Node.js
+                                </p>
+                                <p style="margin: 5px 0;"><strong>Database:</strong> MySQL, MongoDB</p>
+                                <p style="margin: 5px 0;"><strong>Tools & Platforms:</strong> Git, GitHub, VS Code</p>
+                                <p style="margin: 5px 0;"><strong>Core Subjects:</strong> DSA, DBMS, OOP, OS, Computer
+                                    Networks</p>
+                            </div>
+
+                            <!-- Education -->
+                            <div class="mb-4">
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    EDUCATION</h5>
+                                <div class="mb-3">
+                                    <p style="margin: 0; font-weight: 600;">Bachelor of [Your Degree]</p>
+                                    <p style="margin: 0; color: var(--deloitte-gray);">College/University Name |
+                                        Expected 2026</p>
+                                    <p style="margin: 0;">CGPA: X.XX/10.0 or XX%</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p style="margin: 0; font-weight: 600;">12th Standard (HSC/Intermediate)</p>
+                                    <p style="margin: 0; color: var(--deloitte-gray);">School Name | Year</p>
+                                    <p style="margin: 0;">Percentage: XX%</p>
+                                </div>
+                                <div>
+                                    <p style="margin: 0; font-weight: 600;">10th Standard (SSC/Matriculation)</p>
+                                    <p style="margin: 0; color: var(--deloitte-gray);">School Name | Year</p>
+                                    <p style="margin: 0;">Percentage: XX%</p>
+                                </div>
+                            </div>
+
+                            <!-- Projects -->
+                            <div class="mb-4">
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    PROJECTS</h5>
+                                <div class="mb-3">
+                                    <p style="margin: 0; font-weight: 600;">Project Name 1 | Technologies Used</p>
+                                    <ul style="margin: 5px 0; padding-left: 20px;">
+                                        <li>Brief description of what the project does</li>
+                                        <li>Key features or achievements</li>
+                                        <li>Impact or results (if applicable)</li>
+                                    </ul>
+                                </div>
+                                <div class="mb-3">
+                                    <p style="margin: 0; font-weight: 600;">Project Name 2 | Technologies Used</p>
+                                    <ul style="margin: 5px 0; padding-left: 20px;">
+                                        <li>Brief description of what the project does</li>
+                                        <li>Key features or achievements</li>
+                                        <li>Impact or results (if applicable)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Certifications -->
+                            <div class="mb-4">
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    CERTIFICATIONS</h5>
+                                <ul style="margin: 5px 0; padding-left: 20px;">
+                                    <li>Certification Name - Platform/Organization (Year)</li>
+                                    <li>Certification Name - Platform/Organization (Year)</li>
+                                    <li>Certification Name - Platform/Organization (Year)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Achievements -->
+                            <div class="mb-4">
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    ACHIEVEMENTS</h5>
+                                <ul style="margin: 5px 0; padding-left: 20px;">
+                                    <li>Achievement or award with brief description</li>
+                                    <li>Hackathon participation or competition results</li>
+                                    <li>Any relevant academic or technical achievement</li>
+                                </ul>
+                            </div>
+
+                            <!-- Hobbies -->
+                            <div>
+                                <h5
+                                    style="color: var(--deloitte-dark); border-bottom: 2px solid var(--deloitte-green); padding-bottom: 5px; margin-bottom: 15px;">
+                                    HOBBIES & INTERESTS</h5>
+                                <p style="margin: 0;">Coding, Reading Technical Blogs, Problem Solving, Playing Chess,
+                                    Photography</p>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-success mt-4">
+                            <h6><i class="fas fa-check-circle"></i> ATS Resume Tips:</h6>
+                            <ul class="mb-0">
+                                <li>Use simple fonts like Arial, Calibri, or Times New Roman</li>
+                                <li>Keep font size between 10-12 points</li>
+                                <li>Avoid tables, images (except photo), graphics, or columns</li>
+                                <li>Use standard headings like "Education", "Skills", "Projects"</li>
+                                <li>Save as PDF with clear filename: "YourName_Resume.pdf"</li>
+                                <li>Keep it to 1 page (maximum 2 pages for experienced)</li>
+                                <li>Use bullet points for better readability</li>
+                                <li>Add relevant keywords from job description</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Assessment Pattern -->
+    <section id="assessment" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Online Assessment Pattern</h2>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="stats-box">
+                        <i class="fas fa-clipboard-list mb-3" style="font-size: 50px;"></i>
+                        <div class="stats-number">54</div>
+                        <p class="mb-0">MCQ Questions</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="stats-box">
+                        <i class="fas fa-code mb-3" style="font-size: 50px;"></i>
+                        <div class="stats-number">2</div>
+                        <p class="mb-0">Coding Questions</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="stats-box">
+                        <i class="fas fa-clock mb-3" style="font-size: 50px;"></i>
+                        <div class="stats-number">90</div>
+                        <p class="mb-0">Minutes fixed time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="alert alert-danger text-center mb-4" role="alert">
+                        <h5><i class="fas fa-exclamation-triangle"></i> Section-wise Cutoff Exists!</h5>
+                        <p class="mb-0">You must clear the minimum score in each section separately to qualify</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card-custom p-4">
+                        <h5 class="highlight mb-3"><i class="fas fa-calculator"></i> Quantitative Aptitude</h5>
+                        <p><strong>Time limited section</strong></p>
+                        <ul>
+                            <li>Number series and patterns</li>
+                            <li>Percentages and profit/loss</li>
+                            <li>Time and work problems</li>
+                            <li>Speed and distance</li>
+                            <li>Data interpretation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card-custom p-4">
+                        <h5 class="highlight mb-3"><i class="fas fa-puzzle-piece"></i> Logical Reasoning</h5>
+                        <p><strong>Time limited section</strong></p>
+                        <ul>
+                            <li>Blood relations</li>
+                            <li>Seating arrangements</li>
+                            <li>Syllogisms</li>
+                            <li>Coding-decoding</li>
+                            <li>Pattern recognition</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card-custom p-4">
+                        <h5 class="highlight mb-3"><i class="fas fa-book-open"></i> Verbal English</h5>
+                        <p><strong>Time limited section</strong></p>
+                        <ul>
+                            <li>Spot and error</li>
+                            <li>Grammar and usage</li>
+                            <li>Sentence correction</li>
+                            <li>Vocabulary</li>
+                            <li>Para jumbles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card-custom p-4">
+                        <h5 class="highlight mb-3"><i class="fas fa-code"></i> Technical MCQs</h5>
+                        <p><strong>Time limited section with cutoff</strong></p>
+                        <ul>
+                            <li>Object-oriented programming</li>
+                            <li>Database and SQL</li>
+                            <li>Data structures basics</li>
+                            <li>Operating systems</li>
+                            <li>Computer networks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="card-custom p-4">
+                        <h5 class="highlight mb-3"><i class="fas fa-laptop-code"></i> Coding Section</h5>
+                        <p><strong>2 coding problems - Time limited</strong></p>
+                        <ul>
+                            <li>Problem 1: Easy level (Array, String, Basic Math)</li>
+                            <li>Problem 2: Medium level (Data Structures, Logic)</li>
+                            <li>Must write working code with correct logic</li>
+                            <li>Test cases must pass</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Questions -->
+    <section id="technical" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Technical Interview Questions</h2>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="alert alert-info">
+                        <h5><i class="fas fa-info-circle"></i> Combined Round: Technical + HR (30-45 minutes)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is OOP? Explain with real-world example.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Difference between List and Array?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is polymorphism? Types of polymorphism.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Explain inheritance with example.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is encapsulation?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Difference between abstract class and interface.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is a constructor? Types of constructors.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Explain method overloading and overriding.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is REST API? How does it work?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Explain different SQL JOIN types.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is normalization in databases?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Difference between SQL and NoSQL.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is primary key and foreign key?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Explain stack and queue data structures.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is linked list? Types of linked list.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Difference between array and linked list.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What is binary search? When to use it?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Explain your final year project in detail.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What technologies did you use in your project?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Difference between process and thread.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HR Questions -->
+    <section id="hr" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">HR Interview Questions</h2>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Tell me about yourself.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Why do you want to join Deloitte?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What are your strengths?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What are your weaknesses?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Where do you see yourself in 5 years?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Why should we hire you?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> How do you handle pressure?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Describe a challenging situation you faced.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What motivates you?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Are you willing to relocate?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What do you know about Deloitte?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> How do you work in a team?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Tell me about a time you showed leadership.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> What are your salary expectations?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Do you have any questions for us?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenario-Based Questions -->
+    <section id="scenarios" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Scenario-Based Questions</h2>
+            <div class="row mt-5">
+                <div class="col-lg-12 mb-4">
+                    <div class="alert alert-warning">
+                        <h5><i class="fas fa-exclamation-circle"></i> Very Important for Deloitte!</h5>
+                        <p class="mb-0">These questions test your problem-solving and teamwork skills</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Your team member is not responding to messages and deadline is near. What
+                            will you do?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> You realize you won't be able to meet a deadline. How will you handle it?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Your senior suggests something you disagree with. What will you do?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Two team members are arguing and it's affecting project work. How do you
+                            handle it?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Client is unhappy with your work. What is your approach?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> You made a mistake that caused project delay. What will you do?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> You have multiple urgent tasks. How will you prioritize?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Your teammate takes credit for your work. How do you respond?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> You don't know how to solve a problem given by manager. What will you do?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="question-card">
+                        <p><strong>Q:</strong> Team is not cooperating with you. How will you manage?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section id="mistakes" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Common Mistakes to Avoid</h2>
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card-custom p-4">
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 1: Ignoring Aptitude Preparation
+                            </h5>
+                            <p>Many students focus only on coding and ignore aptitude. Remember: You need to clear
+                                section-wise cutoff. If you fail aptitude, you're out even if your coding is perfect.
+                            </p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 2: Learning Answers Without
+                                Understanding</h5>
+                            <p>Just memorizing answers doesn't work. Interviewers ask follow-up questions. If you don't
+                                understand the concept, they will catch you easily.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 3: Poor Communication Skills
+                            </h5>
+                            <p>Not speaking clearly or confidently. Using too many filler words like "umm", "like",
+                                "basically". Even if your answer is correct, bad communication can reject you.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 4: Empty Resume</h5>
+                            <p>Resume with only academic details and no projects. Even small projects show that you have
+                                practical skills and initiative. Add at least 2-3 projects.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 5: Lying on Resume</h5>
+                            <p>Adding skills or projects you don't know. Interviewers will ask detailed questions about
+                                everything on your resume. If you can't explain, you'll be rejected immediately.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 6: Bad Body Language in
+                                Interview</h5>
+                            <p>Not looking at camera during virtual interview. Slouching or looking distracted. Messy
+                                background. Poor internet connection. These small things matter a lot.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 7: Not Practicing Mock
+                                Interviews</h5>
+                            <p>Going to real interview without practice. You need to practice speaking answers out loud.
+                                Record yourself and watch to improve.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 8: Starting Preparation Too Late
+                            </h5>
+                            <p>Starting just 1 week before the test. You need at least 2-3 months of regular preparation
+                                to clear all sections.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 9: Not Reading Job Description
+                            </h5>
+                            <p>Not understanding what role you're applying for. Not knowing about Deloitte's work
+                                culture and values. Shows lack of interest.</p>
+                        </div>
+
+                        <div class="mistake-box mb-3">
+                            <h5><i class="fas fa-times-circle text-danger"></i> Mistake 10: Giving Up After One
+                                Rejection</h5>
+                            <p>Getting rejected and losing confidence. Remember: Most successful people failed multiple
+                                times before succeeding. Learn from mistakes and keep trying.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Resources -->
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Resources I Used</h2>
+            <div class="row mt-5">
+                <div class="col-lg-12 mb-4">
+                    <div class="alert alert-success text-center">
+                        <h5><i class="fas fa-star"></i> These are the exact resources that helped me crack Deloitte NLA!
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aptitude & Technical MCQs -->
+            <div class="row mt-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4 class="text-center mb-4 highlight">Aptitude + Technical MCQs</h4>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold"><i class="fas fa-check-circle text-success"></i> PrepInsta</h6>
+                            <p class="small mb-2">Best for company-specific preparation</p>
+                            <ul class="small">
+                                <li>Deloitte-specific question patterns</li>
+                                <li>Topic-wise practice tests</li>
+                                <li>Previous year questions</li>
+                                <li>Detailed solutions</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold"><i class="fas fa-check-circle text-success"></i> IndiaBix</h6>
+                            <p class="small mb-2">Great for concept building</p>
+                            <ul class="small">
+                                <li>All aptitude topics covered</li>
+                                <li>Formula sheets and shortcuts</li>
+                                <li>Practice problems with explanations</li>
+                                <li>Free and comprehensive</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coding Practice -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-center mb-4 highlight">Coding Practice</h4>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold"><i class="fas fa-check-circle text-success"></i> Striver's DSA Sheet
+                            </h6>
+                            <p class="small mb-2">Complete roadmap for DSA preparation</p>
+                            <ul class="small">
+                                <li>191 carefully selected problems</li>
+                                <li>Covers all important topics</li>
+                                <li>Difficulty-wise categorization</li>
+                                <li>Best for structured learning</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold"><i class="fas fa-check-circle text-success"></i> LeetCode</h6>
+                            <p class="small mb-2">Platform for coding practice</p>
+                            <ul class="small">
+                                <li>Focus on Easy and Medium problems</li>
+                                <li>Company-tagged questions</li>
+                                <li>Discussion forums for help</li>
+                                <li>Track your progress</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold"><i class="fas fa-check-circle text-success"></i> GeeksforGeeks (GFG)
+                            </h6>
+                            <p class="small mb-2">Problem solving + tutorials</p>
+                            <ul class="small">
+                                <li>Practice problems with solutions</li>
+                                <li>Video tutorials available</li>
+                                <li>Company-wise questions</li>
+                                <li>Interview experiences</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Concepts -->
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="card-custom p-4">
+                        <div class="icon-box">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4 class="text-center mb-4 highlight">Technical Concepts & Theory</h4>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <h6 class="fw-bold"><i class="fas fa-database text-success"></i> Database Management
+                                        (DBMS)</h6>
+                                    <p class="small mb-2"><strong>Resource:</strong> GeeksforGeeks</p>
+                                    <ul class="small mb-0">
+                                        <li>SQL queries and joins</li>
+                                        <li>Normalization concepts</li>
+                                        <li>Transaction management</li>
+                                        <li>ER diagrams and keys</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <h6 class="fw-bold"><i class="fas fa-network-wired text-success"></i> Computer
+                                        Networks (CN)</h6>
+                                    <p class="small mb-2"><strong>Resource:</strong> GeeksforGeeks</p>
+                                    <ul class="small mb-0">
+                                        <li>OSI model layers</li>
+                                        <li>TCP/IP protocols</li>
+                                        <li>HTTP, HTTPS, DNS</li>
+                                        <li>IP addressing basics</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <h6 class="fw-bold"><i class="fas fa-laptop-code text-success"></i> Operating
+                                        Systems (OS)</h6>
+                                    <p class="small mb-2"><strong>Resource:</strong> GeeksforGeeks</p>
+                                    <ul class="small mb-0">
+                                        <li>Process management</li>
+                                        <li>Memory management</li>
+                                        <li>Deadlock concepts</li>
+                                        <li>Scheduling algorithms</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <h6 class="fw-bold"><i class="fas fa-code-branch text-success"></i> Programming
+                                        Languages</h6>
+                                    <p class="small mb-2"><strong>Resource:</strong> GeeksforGeeks</p>
+                                    <ul class="small mb-0">
+                                        <li>Java/Python/C++ basics</li>
+                                        <li>OOP concepts</li>
+                                        <li>Exception handling</li>
+                                        <li>Collections/Data structures</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mt-4 mb-0">
+                            <h6><i class="fas fa-lightbulb"></i> My Study Strategy:</h6>
+                            <p class="mb-2">1. <strong>Morning (1 hour):</strong> Aptitude practice on
+                                IndiaBix/PrepInsta</p>
+                            <p class="mb-2">2. <strong>Afternoon (1.5 hours):</strong> DSA practice from Striver's sheet
+                                on LeetCode/GFG</p>
+                            <p class="mb-2">3. <strong>Evening (1 hour):</strong> Read theory topics from GFG (rotate:
+                                DBMS, CN, OS)</p>
+                            <p class="mb-0">4. <strong>Weekend:</strong> Mock tests and revision of weak topics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Section -->
+    <section id="final" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Key Takeaways</h2>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-custom p-5 text-center">
+                        <div class="icon-box" style="width: 100px; height: 100px; font-size: 50px;">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+
+                        <h3 class="mt-4 highlight">Remember These Points</h3>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <i class="fas fa-clock mb-2"
+                                        style="font-size: 30px; color: var(--deloitte-green);"></i>
+                                    <h5>Start Early</h5>
+                                    <p class="small">Begin preparation 2-3 months before</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <i class="fas fa-chart-line mb-2"
+                                        style="font-size: 30px; color: var(--deloitte-green);"></i>
+                                    <h5>Be Consistent</h5>
+                                    <p class="small">Study daily even if just 1 hour</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <i class="fas fa-balance-scale mb-2"
+                                        style="font-size: 30px; color: var(--deloitte-green);"></i>
+                                    <h5>Balance All Sections</h5>
+                                    <p class="small">Aptitude + Technical both important</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card-custom p-3">
+                                    <i class="fas fa-comments mb-2"
+                                        style="font-size: 30px; color: var(--deloitte-green);"></i>
+                                    <h5>Practice Communication</h5>
+                                    <p class="small">Speak clearly and confidently</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-success mt-4">
+                            <h4>"Success comes from preparation meeting opportunity"</h4>
+                        </div>
+
+                        <div class="mt-4">
+                            <p class="lead">Prepare well. Stay confident. You can do this!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start mb-3">
+                    <h3><i class="fas fa-graduation-cap"></i> NLA 2026</h3>
+                    <p>Complete Preparation Guide</p>
+                </div>
+                <div class="col-lg-4 text-center mb-3">
+                    <p>© 2026 Educational Guide</p>
+                    <p class="small">All Deloitte trademarks are property of Deloitte</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mb-3">
+                    <p>Presented by <span class="highlight">Rushikesh Narawade</span></p>
+                    <p>Associate Analyst @ Deloitte</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
