@@ -301,6 +301,576 @@
     background-color: var(--deloitte-green) !important;
     border-color: var(--deloitte-green) !important;
     color: white !important;
+} :root {
+    --deloitte-green: #86BC25;
+    --deloitte-dark: #0D0D0D;
+    --deloitte-gray: #53565A;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--deloitte-dark);
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--deloitte-dark) 0%, var(--deloitte-gray) 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--deloitte-green) !important;
+    font-size: 1.3rem;
+}
+
+.navbar-text {
+    color: white !important;
+    font-size: 0.95rem;
+}
+
+.section {
+    min-height: auto;
+    padding: 60px 0;
+    position: relative;
+}
+
+.section:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section:nth-child(odd) {
+    background: white;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--deloitte-dark);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--deloitte-green);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--deloitte-dark) 0%, var(--deloitte-gray) 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 70px; /* For fixed navbar */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(134,188,37,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-deloitte {
+    background: var(--deloitte-green);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-deloitte:hover {
+    background: #75a521;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(134, 188, 37, 0.3);
+}
+
+.card-custom {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    height: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--deloitte-green) 0%, #75a521 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.flow-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.flow-step {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.flow-step::after {
+    content: '↓';
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -10px;
+    font-size: 25px;
+    color: var(--deloitte-green);
+}
+
+.flow-step:last-child::after {
+    content: '';
+}
+
+.flow-number {
+    width: 40px;
+    height: 40px;
+    background: var(--deloitte-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.stats-box {
+    background: linear-gradient(135deg, var(--deloitte-green) 0%, #75a521 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 10px 0;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.timeline {
+    position: relative;
+    padding: 15px 0;
+}
+
+.timeline-item {
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--deloitte-green);
+}
+
+.badge-deloitte {
+    background: var(--deloitte-green);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.footer {
+    background: var(--deloitte-dark);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--deloitte-green);
+    font-weight: 700;
+}
+
+.question-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid var(--deloitte-green);
+    font-size: 0.9rem;
+}
+
+.mistake-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Q&A Section Styles */
+#qna .accordion-button {
+    background: linear-gradient(135deg, var(--deloitte-green) 0%, #75a521 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+}
+
+#qna .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #75a521 0%, var(--deloitte-green) 100%);
+    color: white;
+}
+
+#qna .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(134, 188, 37, 0.25);
+    border-color: var(--deloitte-green);
+}
+
+#qna .accordion-body {
+    background: #f8f9fa;
+    border-left: 3px solid var(--deloitte-green);
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+/* Form styles */
+#qna .form-control {
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+#qna .form-control:focus {
+    border-color: var(--deloitte-green);
+    box-shadow: 0 0 0 0.25rem rgba(134, 188, 37, 0.25);
+}
+
+/* Social links hover effect */
+.social-links a:hover {
+    color: var(--deloitte-green) !important;
+    transform: translateY(-3px);
+    transition: all 0.3s;
+}
+
+/* LinkedIn button hover */
+.btn-outline-light:hover {
+    background-color: var(--deloitte-green) !important;
+    border-color: var(--deloitte-green) !important;
+    color: white !important;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-text {
+        font-size: 0.8rem;
+    }
+    
+    .hero-section {
+        padding-top: 60px;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        padding-bottom: 12px;
+    }
+    
+    .section-title::after {
+        width: 50px;
+        height: 3px;
+    }
+    
+    .card-custom {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .stats-box {
+        padding: 15px;
+        margin: 8px 0;
+    }
+    
+    .stats-number {
+        font-size: 2rem;
+    }
+    
+    .flow-diagram {
+        margin: 20px 0;
+    }
+    
+    .flow-step {
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .flow-step::after {
+        font-size: 20px;
+        bottom: -20px;
+    }
+    
+    .flow-number {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .timeline-item {
+        padding: 12px;
+        margin: 10px 0;
+    }
+    
+    .question-card {
+        padding: 12px;
+        margin: 8px 0;
+    }
+    
+    .mistake-box {
+        padding: 10px;
+        margin: 6px 0;
+    }
+    
+    /* Table adjustments */
+    .table-responsive {
+        margin: 15px 0;
+    }
+    
+    /* Padding adjustments */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Button size adjustment */
+    .btn-deloitte {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        padding: 20px 0;
+    }
+    
+    .footer h3 {
+        font-size: 1.2rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
+    
+    /* Alert adjustments */
+    .alert {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .stats-number {
+        font-size: 1.8rem;
+    }
+    
+    .card-custom {
+        border-radius: 10px;
+        padding: 12px;
+    }
+    
+    .icon-box {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .badge-deloitte {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    
+    /* Make sure all text is readable */
+    p, li, span {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+    }
+    
+    /* Adjust column spacing */
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 769px) and (max-width: 992px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .flow-diagram {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .flow-step {
+        flex: 0 0 33.333%;
+        min-width: auto;
+        margin-bottom: 30px;
+    }
+    
+    .flow-step::after {
+        content: '→';
+        right: -15px;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+    
+    .flow-step:nth-child(3n)::after {
+        content: '';
+    }
+    
+    .flow-step:nth-child(n+4)::after {
+        content: '↓';
+        right: 50%;
+        top: auto;
+        bottom: -20px;
+        transform: translateX(50%);
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve touch targets */
+.btn, 
+.btn-deloitte,
+.accordion-button,
+.form-control,
+.navbar-toggler {
+    min-height: 44px;
+}
+
+/* Better spacing for lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Improve image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Better table display on mobile */
+.table {
+    font-size: 0.85rem;
+}
+
+/* Fix for LinkedIn badge on mobile */
+.LI-profile-badge {
+    max-width: 100%;
+    overflow: hidden;
 }
     </style>
 </head>
@@ -1332,7 +1902,6 @@
         </div>
     </div>
 </section>
-
 
     <!-- Footer -->
     <footer class="footer">
